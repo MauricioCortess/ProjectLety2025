@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestor de Eventos Académicos - TECNM</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header con navegación -->
+    <header class="main-header">
+        <nav class="navbar">
+            <div class="brand">
+                <img src="C:\Users\max06\gestor-eventoss\assets\images\itc.jpg" alt="Logo TECNM" class="logo">
+                <h1>Eventos Académicos</h1>
+            </div>
+            <div class="nav-items">
+                <button class="nav-link" id="calendarLink"><i class="fas fa-calendar-alt"></i> Calendario</button>
+                <button class="nav-link" id="loginBtn"><i class="fas fa-sign-in-alt"></i> Acceso Académico</button>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Banner principal -->
+    <section class="hero-banner">
+        <div class="hero-content">
+            <h2>Eventos Tecnm Campus Cancún</h2>
+            <p>Participa en los eventos académicos más relevantes de nuestra institución</p>
+            <div class="search-bar">
+                <input type="text" placeholder="Buscar eventos...">
+                <button class="search-btn"><i class="fas fa-search"></i></button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección principal de eventos -->
+    <main class="event-container">
+        <section class="event-categories">
+            <h2>Próximos Eventos Destacados</h2>
+            <div class="category-filter">
+                <button class="category-btn active">Todos</button>
+                <button class="category-btn">Conferencias</button>
+                <button class="category-btn">Talleres</button>
+                <button class="category-btn">Seminarios</button>
+            </div>
+            
+            <div id="eventos-container" class="event-grid">
+                <!-- Tarjeta de evento de ejemplo -->
+                <article class="event-card">
+                    <div class="event-header">
+                        <span class="event-category conferencia">Conferencia</span>
+                        <span class="event-date">25 Marzo 2025</span>
+                    </div>
+                    <img src="C:\Users\max06\gestor-eventoss\assets\images\itc.jpg" alt="Evento" class="event-image">
+                    <div class="event-content">
+                        <h3>Inteligencia Artificial en la Educación</h3>
+                        <p class="event-time"><i class="fas fa-clock"></i> 10:00 AM - 12:00 PM</p>
+                        <p class="event-location"><i class="fas fa-map-marker-alt"></i> Auditorio Principal</p>
+                        <p class="event-description">Explora el futuro de la educación con las últimas tendencias en IA aplicadas a procesos educativos.</p>
+                        <div class="event-actions">
+                            <button class="btn-detalle">Más información</button>
+                            <button class="btn-registro">Registrarse</button>
+                        </div>
+                    </div>
+                </article>
+                <!-- Más eventos se cargarán dinámicamente -->
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>Contacto</h4>
+                <p>Av. Kabah km 3 Cancún, Quintana Roo</p>
+                <p>contacto@tecnmcancun.edu.mx</p>
+                <p>Tel: 998 123 4567</p>
+            </div>
+            <div class="footer-section">
+                <h4>Enlaces rápidos</h4>
+                <a href="#">Políticas de eventos</a>
+                <a href="#">Calendario académico</a>
+                <a href="#">Recursos para organizadores</a>
+            </div>
+            <div class="footer-section">
+                <h4>Síguenos</h4>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2024 Tecnológico Nacional de México Campus Cancún. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- Modal de Login -->
+    <div class="modal" id="loginModal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <h2>Acceso Académico</h2>
+            <form class="login-form">
+                <label for="username">Usuario:</label>
+                <input type="text" id="username" required>
+                
+                <label for="password">Contraseña:</label>
+                <input type="password" id="password" required>
+                
+                <button type="submit" class="btn-login">Ingresar</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html> 
